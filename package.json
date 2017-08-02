@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "webpack-dev-server",
-    "build" : "webpack --config webpack.dist.config.js"
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.dist.config.js"
   },
   "author": "ace",
   "license": "ISC",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
