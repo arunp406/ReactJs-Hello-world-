@@ -1,0 +1,26 @@
+---
+- name: Clone and build 
+  hosts:172.31.0.222
+  become: yes
+  gather_facts: false
+
+  tasks:
+    - name: Clone Git repository
+      git:
+        repo: <https://github.com/arunp406/ReactJs-Hello-world-l>
+        dest: /home/user/myproject
+        version: master
+
+    - name: Install NPM dependencies
+      npm:
+        path: /home/user/myproject
+
+    - name: Start the application
+      command:
+        cmd: npm start
+        chdir: 600
+
+    - name: Run the build script
+      command:
+        cmd: npm run build
+        chdir: 600
