@@ -2,18 +2,18 @@
 - name: Clone and build 
   hosts:172.31.0.222
   become: yes
-  gather_facts: false
+  gather_facts: true
 
   tasks:
     - name: Clone Git repository
       git:
         repo: <https://github.com/arunp406/ReactJs-Hello-world-l>
-        dest: /home/user/myproject
+        dest: /etc/filesfolder
         version: master
 
     - name: Install NPM dependencies
       npm:
-        path: /home/user/myproject
+        path: /etc/filesfolder
 
     - name: Start the application
       command:
