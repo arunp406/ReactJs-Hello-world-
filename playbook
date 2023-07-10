@@ -1,6 +1,6 @@
 ---
 - name: Clone and build 
-  hosts:172.31.0.222
+  hosts:172.31.46.153
   become: yes
   gather_facts: true
 
@@ -20,7 +20,7 @@
         cmd: npm start
         chdir: 600
 
-    - name: Run the build script
+    - name: Run the build 
       command:
         cmd: npm run build
         chdir: 600
